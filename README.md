@@ -28,18 +28,33 @@ Ce projet est une solution d'analyse et de gestion des données agricoles permet
 
 ## Structure du Projet
 ```
-.
-├── data_manager.py        # Gestion des données (monitoring, météo, sol)
-├── analyzer.py            # Analyse des données agricoles
-├── report_generator.py    # Génération des rapports
-├── validation.py          # Validation des prédictions et recommandations
-├── app.py                 # Interface utilisateur avec Streamlit
-├── README.md              # Documentation du projet
-├── requirements.txt       # Dépendances Python
-├── data/                  # Dossier des données (CSV, JSON, etc.)
-├── outputs/               # Dossier des rapports générés (PDF, images)
-└── visuals/               # Graphiques et cartes générés
-```
+├── Data/                     # Contient les fichiers de données (CSV, JSON, etc.)
+├── Notebooks/                # Contient les notebooks Jupyter pour les analyses exploratoires
+│   └── analyse_exploratoires.ipynb
+├── Reports/                  # Rapports générés (HTML, PDF, etc.)
+├── src/                      # Dossier contenant tout le code source
+│   ├── __init__.py           # Permet de traiter src comme un module Python
+│   ├── validation/           # Sous-dossier pour les outils de validation
+│   │   └── agri_validation.py
+│   ├── visualisation/        # Sous-dossier pour les visualisations
+│   │   └── map_visualisation.py
+│   ├── core/                 # Sous-dossier pour la logique principale
+│   │   ├── data_manager.py   # Gestion des données
+│   │   ├── dashboard.py      # Création des graphiques et dashboard
+│   │   ├── integration.py    # Intégration des modules
+│   │   ├── report_generator.py # Génération des rapports
+│   ├── app/                  # Application principale
+│   │   ├── app_streamlit.py  # Application Streamlit
+│   └── tests/                # Dossier pour les tests unitaires
+│       ├── test.py           # Fichiers de tests
+│       ├── test_validation.py
+│       ├── test_data_manager.py
+├── venv/                     # Environnement virtuel
+├── .gitignore                # Fichiers et dossiers à ignorer par Git
+├── .gitattributes            # Fichiers Git pour gérer les attributs (fin de ligne, etc.)
+├── README.md                 # Documentation du projet
+├── requirements.txt          # Dépendances Python
+
 
 ## Installation
 
